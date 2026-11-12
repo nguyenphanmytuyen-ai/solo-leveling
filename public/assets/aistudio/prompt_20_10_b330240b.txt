@@ -1,0 +1,3 @@
+Hãy đưa những ràng buộc về tên khi đặt tên cho nhân vật: Không để trống, các dấu cách dư đằng sau bị bỏ, đằng trước cũng bỏ, khi nhập tên vào hãy ràng buộc theo yêu cầu như thế.
+Hãy để thời gian khi đang làm nhiệm vụ, bắt đầu từ 0 và mỗi nhiệm vụ sẽ có một bộ đếm thời gian riêng.
+Hãy cập nhật nút reset data.

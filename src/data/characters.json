@@ -1,0 +1,66 @@
+[
+  {
+    "id": "hero",
+    "displayName": "Nam",
+    "tagline": "Nhân vật khởi đầu",
+    "description": "Sẵn sàng đồng hành cùng bạn chinh phục nhiệm vụ.",
+    "requiredXp": 0,
+    "idle": {
+      "src": "assets/characters/boy1.gif"
+    },
+    "pixelArt": true,
+    "stage": {
+      "scale": 0.9,
+      "offsetY": 0
+    },
+    "placeholder": false
+  },
+  {
+    "id": "scholar",
+    "displayName": "Nữ",
+    "tagline": "Nhân vật khởi đầu",
+    "description": "Sẵn sàng đồng hành cùng bạn chinh phục nhiệm vụ.",
+    "requiredXp": 0,
+    "idle": {
+      "src": "assets/characters/girl1.gif"
+    },
+    "pixelArt": true,
+    "stage": {
+      "scale": 0.9,
+      "offsetY": 0
+    },
+    "placeholder": false
+  },
+  {
+    "id": "boy2",
+    "displayName": "Boy thể thao",
+    "tagline": "Mở khóa ở 100 XP",
+    "description": "Phần thưởng cho 100 XP đầu tiên trên hành trình của bạn.",
+    "requiredXp": 100,
+    "idle": {
+      "src": "assets/characters/boy2.gif"
+    },
+    "pixelArt": true,
+    "stage": {
+      "scale": 0.9,
+      "offsetY": 0
+    },
+    "placeholder": false
+  },
+  {
+    "id": "girl2",
+    "displayName": "Girl IT",
+    "tagline": "Mở khóa ở 100 XP",
+    "description": "Phần thưởng cho 100 XP đầu tiên trên hành trình của bạn.",
+    "requiredXp": 100,
+    "idle": {
+      "src": "assets/characters/girl2.gif"
+    },
+    "pixelArt": true,
+    "stage": {
+      "scale": 0.9,
+      "offsetY": 0
+    },
+    "placeholder": false
+  }
+]

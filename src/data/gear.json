@@ -1,0 +1,82 @@
+[
+  {
+    "id": "gear-head-band",
+    "name": "Băng Đô Ý Chí Tân Binh",
+    "description": "Băng đô vải đỏ thắt chặt quyết tâm cày deadline.",
+    "slot": "head",
+    "rarity": "Common",
+    "set": "Tân Binh",
+    "unlock": { "type": "starter" },
+    "adjust": { "x": 0, "y": 0, "scale": 1, "flipX": false }
+  },
+  {
+    "id": "gear-face-glasses",
+    "name": "Kính Trí Tuệ Khung Bạc",
+    "description": "Kính cận chống ánh sáng xanh màn hình máy tính.",
+    "slot": "face",
+    "rarity": "Common",
+    "set": "Học Giả",
+    "unlock": { "type": "starter" },
+    "adjust": { "x": 0, "y": 0, "scale": 1, "flipX": false }
+  },
+  {
+    "id": "gear-body-hoodie",
+    "name": "Áo Hoodie IT Tối Giản",
+    "description": "Chiếc áo hoodie đen đồng phục không thể thiếu của mọi coder.",
+    "slot": "body",
+    "rarity": "Common",
+    "set": "Tân Binh",
+    "unlock": { "type": "starter" },
+    "adjust": { "x": 0, "y": 0, "scale": 1, "flipX": false }
+  },
+  {
+    "id": "gear-legs-jeans",
+    "name": "Quần Jean Đen Bụi Bặm",
+    "description": "Thoải mái di chuyển giữa các giảng đường và thư viện.",
+    "slot": "legs",
+    "rarity": "Common",
+    "set": "Tân Binh",
+    "unlock": { "type": "starter" },
+    "adjust": { "x": 0, "y": 0, "scale": 1, "flipX": false }
+  },
+  {
+    "id": "gear-feet-sneakers",
+    "name": "Giày Thể Thao Siêu Nhẹ",
+    "description": "Tăng tốc chạy sang phòng học khi chuông vừa reo.",
+    "slot": "feet",
+    "rarity": "Common",
+    "set": "Tân Binh",
+    "unlock": { "type": "starter" },
+    "adjust": { "x": 0, "y": 0, "scale": 1, "flipX": false }
+  },
+  {
+    "id": "gear-back-backpack",
+    "name": "Balo Laptop Chống Nước",
+    "description": "Chứa trọn vẹn laptop, sạc, bình nước và hy vọng tốt nghiệp.",
+    "slot": "back",
+    "rarity": "Common",
+    "set": "Học Giả",
+    "unlock": { "type": "starter" },
+    "adjust": { "x": 0, "y": 0, "scale": 1, "flipX": false }
+  },
+  {
+    "id": "gear-handheld-tablet",
+    "name": "Sổ Tay Kỹ Thuật Số",
+    "description": "Thiết bị ghi chép công thức toán và ý tưởng thuật toán.",
+    "slot": "handheld",
+    "rarity": "Common",
+    "set": "Học Giả",
+    "unlock": { "type": "starter" },
+    "adjust": { "x": 0, "y": 0, "scale": 1, "flipX": false }
+  },
+  {
+    "id": "gear-acc-smartwatch",
+    "name": "Đồng Hồ Thông Minh Đo Pomodoro",
+    "description": "Rung nhắc nhở nghỉ giải lao và duy trì nhịp độ làm việc.",
+    "slot": "accessory",
+    "rarity": "Common",
+    "set": "Học Giả",
+    "unlock": { "type": "starter" },
+    "adjust": { "x": 0, "y": 0, "scale": 1, "flipX": false }
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "name": "SOLO LEVELLING - RPG To-Do Sinh Viên",
+  "description": "Web app to-do RPG dành cho sinh viên đại học. READY TO BECOME BETTER? Biến việc học và thói quen thành nhiệm vụ, nhận XP, thăng hạng và giữ streak.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

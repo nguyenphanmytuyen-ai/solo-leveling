@@ -1,0 +1,30 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {resolveFocusTask} from './focusTask.ts';
+import {getDefaultState} from '../store/persistence.ts';
+import {gameReducer} from '../store/reducer.ts';
+import {DAILY_QUESTS} from '../data/dailyQuests.ts';
+import {QUEST_PACKAGES} from '../data/questPackages.ts';
+import {CAMPUS_EVENTS} from '../data/events.ts';
+import {selectTotalXp} from '../store/selectors.ts';
+import {getElapsedTaskSeconds} from './taskWorkflow.ts';
+test('Focus resolves every existing daily, package and event to its original completion action',()=>{
+ const s=getDefaultState();
+ for(const t of DAILY_QUESTS) assert.deepEqual(resolveFocusTask(s,t.id),{title:t.name,complete:{type:'COMPLETE_DAILY_QUEST',payload:{questId:t.id}}});
+ for(const p of QUEST_PACKAGES) for(const t of p.tasks) assert.deepEqual(resolveFocusTask(s,t.id),{title:t.title,complete:{type:'COMPLETE_PACKAGE_TASK',payload:{packageId:p.id,taskId:t.id}}});
+ for(const e of CAMPUS_EVENTS) for(const t of e.tasks) assert.deepEqual(resolveFocusTask(s,t.id),{title:t.name,complete:{type:'COMPLETE_EVENT_TASK',payload:{eventId:e.id,taskId:t.id}}});
+ assert.equal(resolveFocusTask(s,'missing'),null);
+});
+test('Focus pause awards nothing, resume excludes paused time, complete awards once',()=>{
+ const start=new Date('2026-11-12T10:00:00Z'),id=DAILY_QUESTS[0].id;
+ let s=gameReducer(getDefaultState(),{type:'START_TASK',payload:{questId:id}},start).state;
+ s=gameReducer(s,{type:'PAUSE_TASK',payload:{questId:id}},new Date(+start+12000)).state;
+ assert.equal(selectTotalXp(s),0);assert.equal(s.completions.length,0);
+ assert.equal(getElapsedTaskSeconds(s.activeTasks[id],new Date(+start+60000)),12);
+ s=gameReducer(s,{type:'RESUME_TASK',payload:{questId:id}},new Date(+start+60000)).state;
+ assert.equal(getElapsedTaskSeconds(s.activeTasks[id],new Date(+start+65000)),17);
+ const action=resolveFocusTask(s,id)!.complete;
+ s=gameReducer(s,action,new Date(+start+65000)).state;
+ assert.equal(selectTotalXp(s),DAILY_QUESTS[0].xp);assert.equal(s.activeTasks[id],undefined);
+ assert.equal(selectTotalXp(gameReducer(s,action,new Date(+start+66000)).state),DAILY_QUESTS[0].xp);
+});
